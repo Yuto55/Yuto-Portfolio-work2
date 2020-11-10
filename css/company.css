@@ -1,0 +1,410 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #666;
+  background-color: #eee;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 3px;
+  background-color: white;
+}
+
+header {
+  border-top: 4px solid blue;
+}
+
+.h-logo {
+  width: 300px;
+  margin: 40px 30px;
+}
+
+.h-nav {
+  margin: 0 auto;
+}
+
+.h-menu {
+  display: flex;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+.h-list {
+  width: calc(100%/6);
+  margin: 0 auto;
+  padding: 15px;
+  font-size: 15px;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.h-list:first-child {
+  border-left: none;
+}
+
+.h-list:hover {
+  background-color: #e6ebfa;
+}
+
+.h-list a {
+  text-decoration: none;
+  color: #666;
+  text-align: center;
+}
+
+.h-l-box {
+  border-left: 3px solid transparent;
+}
+
+.current {
+  background-color: #e6ebfa;
+}
+
+.current .h-l-box {
+  border-left: 3px solid blue;
+}
+
+.h-list:hover .h-l-box {
+  border-left: 3px solid blue;
+}
+
+.h-list:hover .h-l-top {
+  color: blue;
+}
+
+.h-l-top {
+  font-weight: bold;
+}
+
+.h-l-bottom {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.h-main {
+  width: 100%;
+}
+
+.contents {
+  display: flex;
+  margin-top: 30px;
+}
+
+main {
+  width: 70%;
+}
+
+.m-h2 {
+  margin: 0 30px;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: normal;
+  border-radius: 3px;
+  color: white;
+  background-color: blue;
+}
+
+.m-h2::before {
+  content: "";
+  border-left: 3px solid lightblue;
+  margin: 0 20px 0 0px;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 20px 30px 40px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+}
+
+table th {
+  padding: 15px 10px;
+  width: 25%;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+table td {
+  padding: 10px 40px;
+}
+
+
+table td a {
+  color: #666;
+  transition: 0.5s;
+}
+
+table td a:hover {
+  text-decoration: none;
+  color: blue;
+  transition: 0.5s;
+}
+
+
+.m-h3 {
+  margin: 20px 30px 10px;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: normal;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+main p {
+  line-height: 2;
+  margin: 10px 50px 20px;
+}
+
+main p a {
+  color: #666;
+  transition: 0.5s;
+}
+
+main p a:hover {
+  text-decoration: none;
+  color: blue;
+  transition: 0.5s;
+}
+
+.m-point {
+  color: red;
+  font-weight: bold;
+}
+
+.m-point2 {
+  color: red;
+}
+
+.m-point3 {
+  padding: 6px 10px;
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+aside {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.s-box {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.s-menu {
+  list-style-type: none;
+}
+
+.s-menu a {
+  text-decoration: none;
+  color: #666;
+  transition: 0.5s;
+}
+
+.s-menu a:hover {
+  color: blue;
+  transition: 0.5s;
+}
+
+.s-h3 {
+  padding: 20px 10px;
+  font-size: 16px;
+  border-top: 4px solid blue;
+  border-bottom: 1px solid #ccc;
+  background-color: #eee;
+}
+
+.s-list {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  clear: both;
+  overflow: hidden;
+}
+
+.s-box2 {
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+}
+
+.s-img {
+  float: left;
+  width: 15%;
+  margin-right: 10px;
+}
+
+.s-h4 {
+  color: blue;
+  font-size: 11px;
+}
+
+aside p {
+  font-size: 11px;
+}
+
+.c-title {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.c-address {
+  text-align: center;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 15px 0 10px;
+  text-align: center;
+  color: white;
+  background-color: blue;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: blue;
+  transition: 0.5s;
+}
+
+#nav-opened {
+  display: none;
+}
+
+.nav-bar span, .nav-bar span::before, .nav-bar span::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 30px;
+  background-color: #000;
+}
+
+.nav-bar span {
+  top: 36px;
+  right: 30px;
+}
+
+.nav-bar span::before {
+  bottom: -10px;
+}
+
+.nav-bar span::after {
+  bottom: -20px;
+}
+
+#nav-opened:checked ~ .nav-contents {
+  opacity: 0.8;
+  display: block;
+} 
+
+.nav-contents {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  background-color: black;
+  opacity: 0;
+  z-index: 100;
+  display: none;
+}
+
+.n-menu {
+  list-style-type: none;
+}
+
+.n-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.n-list {
+  padding: 15px;
+  border-bottom: 1px solid white;
+}
+
+.n-l-top {
+  font-size: 19px;
+}
+
+.n-l-bottom {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .sp-box {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .container {
+    width: 100%;
+  }
+
+  .h-nav {
+    display: none;
+  }
+
+  .contents {
+    display: block;
+    margin-top: 0px;
+  }
+  
+  main {
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  .m-h2 {
+    margin: 0 10px;
+  }
+
+  main dl {
+    margin: 20px 20px;
+  }
+
+  .m-h3 {
+    margin: 20px 10px 10px;
+  }
+
+  main p {
+    line-height: 2;
+    margin: 10px 20px 20px;
+  }
+  
+  table {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  table th {
+    width: 30%;
+  }
+}

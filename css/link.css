@@ -1,0 +1,372 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #666;
+  background-color: #eee;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 3px #ccc;
+}
+
+header {
+  border-top: 4px solid blue;
+}
+
+.h-logo {
+  width: 300px;
+  margin: 40px 30px;
+}
+
+.h-nav {
+  margin: 0 auto;
+}
+
+.h-menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0 auto;
+}
+
+.h-list {
+  width: calc(100%/6);
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.current {
+  background-color: #e6ebfa;
+}
+
+.current .h-l-box {
+  border-left: 3px solid blue;
+}
+
+.current .h-l-top {
+  color: blue;
+}
+
+
+.h-list:first-child {
+  border-left: none;
+}
+
+.h-list a {
+  display: block;
+  text-decoration: none;
+  color: #666;
+  padding: 15px;
+}
+
+.h-l-box {
+  border-left: 3px solid transparent;
+}
+
+.h-list a:hover .h-l-box {
+  border-left: 3px solid blue;
+}
+
+.h-list a:hover {
+  background-color:#e6ebfa;
+}
+
+.h-l-top {
+  font-weight: bold;
+}
+
+.h-list a:hover .h-l-top {
+  color: blue;
+}
+
+
+.h-l-bottom {
+  font-size: 13px;
+}
+
+.contents {
+  display: flex;
+  margin-top: 35px;
+}
+
+main {
+  width: 70%;
+}
+
+.m-h2 {
+  margin: 0 30px 10px;
+  padding: 10px 20px;
+  font-size: 17px;
+  border-radius: 5px;
+  color: white;
+  background-color: blue;
+  font-weight: normal;
+}
+
+.m-h2::before {
+  content: "";
+  border-left: 3px solid lightblue;
+  margin-right: 20px;
+}
+
+main p {
+  margin: 0 50px 10px;
+  line-height: 2;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0 30px 20px;
+}
+
+caption {
+  border: 1px solid #ccc;
+  border-bottom: none;
+  text-align: left;
+  padding: 15px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+}
+
+table th {
+  padding: 15px;
+  font-weight: normal;
+  width: 15%;
+}
+
+table th a {
+  color: #666;
+  transition: 0.5s;
+}
+
+table th a:hover {
+  text-decoration: none;
+  color: blue;
+  transition: 0.5s;
+}
+
+table td {
+  padding: 10px 15px;
+  width: 45%;
+}
+
+aside {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.s-l-flame {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.s-h3 {
+  border-top: 4px solid blue;
+  padding: 15px;
+  font-size: 17px;
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+}
+
+.s-menu {
+  list-style-type: none;
+}
+
+.s-list {
+  border-bottom: 1px solid #ccc;
+}
+
+.s-list a {
+  display: block;
+  padding: 10px;
+  clear: both;
+  overflow: hidden;
+  text-decoration: none;
+  color: #666;
+}
+
+.s-list a:hover {
+  color: blue;
+}
+
+.s-l-flame2 {
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+}
+
+.s-l-box {
+  font-size: 13px;
+}
+
+.s-list img {
+  float: left;
+  width: 20%;
+  margin: 3px 5px 0 0;
+}
+
+.s-h4 {
+  color: blue;
+  font-weight: normal;
+}
+
+.c-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.c-address {
+  text-align: center;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  font-size: 16px;
+  background-color: blue;
+  text-align: center;
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: blue;
+}
+
+#nav-opened {
+  display: none;
+}
+
+.nav-bar span, .nav-bar span::before, .nav-bar span::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 30px;
+  background-color: #000;
+}
+
+.nav-bar span {
+  top: 38px;
+  right: 36px;
+}
+
+.nav-bar span::before {
+  bottom: -10px;
+}
+
+.nav-bar span::after {
+  bottom: -20px;
+}
+
+#nav-opened:checked ~ .nav-contents {
+  display: block;
+  opacity: 0.8;
+}
+
+.nav-contents {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  background-color: black;
+  display: none;
+  opacity: 0;
+}
+
+.sp-menu {
+  list-style-type: none;
+}
+
+.sp-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.sp-list {
+  padding: 15px;
+  border-bottom: 1px solid white;
+}
+
+.sp-l-top {
+  font-size: 18px;
+}
+
+.sp-l-bottom {
+  font-size: 13px;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .sp-box {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .container {
+    width: 100%;
+  }
+
+  .h-nav {
+    display: none;
+  }
+
+  .h-logo {
+    width: 300px;
+    margin: 40px 30px 20px;
+  }
+
+  .contents {
+    margin: 0 20px;
+    display: block;
+  }
+
+  main { 
+    width: 100%;
+  }
+
+  .m-h2 {
+    margin: 10px 0;
+  }
+
+  main p {
+    margin: 10px 30px;
+  }
+
+  table {
+    margin: 10px 0; 
+  }
+
+  table th {
+    width: 30%;
+  }
+
+  aside {
+    width: 100%;
+  }
+}
