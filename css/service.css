@@ -321,8 +321,9 @@ footer a:hover {
 }
 
 .nav-label span {
-  top: 40px;
-  right: 30px;
+  right: 10px;
+  top: 20px;
+
 }
 
 .nav-label span::before {
