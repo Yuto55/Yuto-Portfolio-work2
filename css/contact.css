@@ -63,22 +63,18 @@ header img {
 
 .h-l-box {
   border-left: 3px solid transparent;
-  transition: 0.5s;
 }
 
 .h-list a:hover .h-l-box {
   border-left: 3px solid blue;
-  transition: 0.5s;
 }
 
 .h-list a:hover .h-l-top {
   color: blue;
-  transition: 0.5s;
 }
 
 .h-l-top {
   font-weight: bold;
-  transition: 0.5s;
 }
 
 .h-l-bottom {
