@@ -312,12 +312,12 @@ footer a:hover {
 }
 
 .n-line span::before {
-  bottom: -12px;
+  bottom: -10px;
 }
 
 
 .n-line span::after {
-  bottom: -24px;
+  bottom: -20px;
 }
 
 .nav-contents {
