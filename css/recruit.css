@@ -255,8 +255,8 @@ footer a:hover {
 }
 
 .nav-bar span {
-  top: 38px;
-  right: 30px;
+  right: 10px;
+  top: 20px;
 }
 
 .nav-bar span::before  {
