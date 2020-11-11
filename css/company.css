@@ -45,6 +45,7 @@ header {
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   text-align: center;
+  transition: 0.5s;
 }
 
 .h-list:first-child {
@@ -52,6 +53,7 @@ header {
 }
 
 .h-list:hover {
+  transition: 0.5s;
   background-color: #e6ebfa;
 }
 
